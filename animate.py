@@ -27,6 +27,8 @@ TILE_SIZE = 128
 SCALED_TILE_SIZE = TILE_SIZE * PLATFORM_SCALE
 MAP_HEIGHT = 7
 
+BACKGROUND = arcade.load_texture("images/bg/BG.png")
+
 def get_map(filename):
     """
     This function loads an array based on a map stored as a list of
@@ -83,6 +85,8 @@ class Window(arcade.Window):
 
     def on_draw(self):
         arcade.start_render()
+        arcade.draw_texture_rectangle(WIDTH // 2, HEIGHT // 2,
+                                      WIDTH, HEIGHT, BACKGROUND)
         self.player_list.draw()
         self.wall_list.draw()
 
