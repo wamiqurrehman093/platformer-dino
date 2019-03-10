@@ -1,2 +1,2 @@
-# platformer-dino
-Dino Platformer
+# dinasour
+dinasour
